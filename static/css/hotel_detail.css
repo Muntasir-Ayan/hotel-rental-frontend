@@ -1,20 +1,24 @@
-/* static/css/hotel_detail.css */
+/* Custom CSS for the hotel details page */
 
 .image-gallery img {
     cursor: pointer;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
 }
+
 .image-gallery img:hover {
     opacity: 0.9;
 }
+
 .breadcrumb {
     font-size: 14px;
     color: #666;
 }
+
 .breadcrumb a {
     color: #003580;
     text-decoration: none;
 }
+
 .breadcrumb a:hover {
     text-decoration: underline;
 }

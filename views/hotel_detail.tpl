@@ -1,13 +1,10 @@
-<!-- views/hotel_detail.tpl -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{.Hotel.HotelName}}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/hotel_detail.css">
 </head>
 <body class="bg-gray-100">
@@ -15,15 +12,14 @@
     {{template "nav.tpl" .}}
 
     <div class="container mx-auto py-8 px-4">
-    
+
         <!-- Breadcrumbs -->
         <div class="breadcrumb mb-4">
-            <a href="/">Home</a> > 
-            <a href="/">USA</a> > 
-            <a href="/hotels?location={{.City}}">{{.Hotel.City}}</a> > 
-            <a href="/hotels?location={{.Neighborhood}}">{{.Hotel.Neighborhood}}</a>
+            <a href="/" class="text-blue-600 hover:underline">Home</a> > 
+            <a href="/" class="text-blue-600 hover:underline">USA</a> > 
+            <a href="/hotels?location={{.City}}" class="text-blue-600 hover:underline">{{.Hotel.City}}</a> > 
+            <a href="/hotels?location={{.Neighborhood}}" class="text-blue-600 hover:underline">{{.Hotel.Neighborhood}}</a>
         </div>
-
 
         <!-- Property Details -->
         <div id="propertyDetails">
@@ -35,6 +31,7 @@
                 </div>
                 <span class="text-gray-600">{{.Hotel.Location}}</span>
             </div>
+
             <!-- Property Features -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div class="flex items-center">
@@ -56,16 +53,15 @@
                     <span>{{.Hotel.Guests}} Guests</span>
                 </div>
             </div>
+
             <!-- Hotel Images Gallery -->
             <div class="flex flex-wrap -mx-2 mb-8 image-gallery">
                 {{range .Hotel.ImageURLs}}
                     <div class="w-full sm:w-1/2 md:w-1/4 p-2">
-                        <img src="{{.}}" alt="Hotel Image" class="w-full h-48 object-cover rounded">
+                        <img src="{{.}}" alt="Hotel Image" class="w-full h-48 object-cover rounded transition-opacity hover:opacity-90 cursor-pointer">
                     </div>
                 {{end}}
             </div>
-
-
 
             <!-- Description -->
             <div class="bg-white rounded-lg p-6 mb-8 shadow-sm">
