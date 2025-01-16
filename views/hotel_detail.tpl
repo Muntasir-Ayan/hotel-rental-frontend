@@ -8,26 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        .image-gallery img {
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-        .image-gallery img:hover {
-            opacity: 0.9;
-        }
-        .breadcrumb {
-            font-size: 14px;
-            color: #666;
-        }
-        .breadcrumb a {
-            color: #003580;
-            text-decoration: none;
-        }
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/css/hotel_detail.css">
 </head>
 <body class="bg-gray-100">
     <!-- Header -->
@@ -39,8 +20,8 @@
         <div class="breadcrumb mb-4">
             <a href="/">Home</a> > 
             <a href="/">USA</a> > 
-            <a href="#">{{.Hotel.City}}</a> > 
-            <a href="#">{{.Hotel.Neighborhood}}</a>
+            <a href="/hotels?location={{.City}}">{{.Hotel.City}}</a> > 
+            <a href="/hotels?location={{.Neighborhood}}">{{.Hotel.Neighborhood}}</a>
         </div>
 
 

@@ -1,0 +1,20 @@
+/* static/css/hotel_detail.css */
+
+.image-gallery img {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.image-gallery img:hover {
+    opacity: 0.9;
+}
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+}
+.breadcrumb a {
+    color: #003580;
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
