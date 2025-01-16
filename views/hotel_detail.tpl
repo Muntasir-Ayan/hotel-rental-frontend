@@ -17,8 +17,8 @@
         <div class="breadcrumb mb-4">
             <a href="/" class="text-blue-600 hover:underline">Home</a> > 
             <a href="/" class="text-blue-600 hover:underline">USA</a> > 
-            <a href="/hotels?location={{.City}}" class="text-blue-600 hover:underline">{{.Hotel.City}}</a> > 
-            <a href="/hotels?location={{.Neighborhood}}" class="text-blue-600 hover:underline">{{.Hotel.Neighborhood}}</a>
+            <a href="/hotels?location={{.Hotel.City}}">{{.Hotel.City}}</a> > 
+            <a href="/hotels?location={{.Hotel.Neighborhood}}">{{.Hotel.Neighborhood}}</a>
         </div>
 
         <!-- Property Details -->
